@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         EditText txtUsername;
         EditText txtPassword;
         Button btnSignup;
+        Button btnLogin;
         String regularExpression="^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!])[A-Za-z\\d@$!]{8,}$";
         @Override
         protected void onCreate(Bundle savedInstanceState)
@@ -24,24 +25,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 txtPassword=(EditText)findViewById(R.id.txt_password);
                 btnSignup=(Button)findViewById(R.id.btn_signup);
                 btnSignup.setOnClickListener(this);
+                btnLogin=(Button)findViewById(R.id.login);
+                btnLogin.setOnClickListener(this);
         }
         public void onClick(View v)
         {
-                String username=txtUsername.getText().toString();
-                String password=txtPassword.getText().toString();
-                if(validatePassword(password))
+                if(v.equals(btnSignup))
+                {
+                        String username = txtUsername.getText().toString();
+                        String password = txtPassword.getText().toString();
+                        if (validatePassword(password))
+                        {
+                                Bundle bundle = new Bundle();
+                                bundle.putString("user", username);
+                                bundle.putString("Lab@2018", password);
+                                Intent it = new Intent(this, LoginActivity.class);
+                                it.putExtra("data", bundle);
+                                startActivity(it);
+                        } else {
+                                Toast.makeText(getBaseContext(), "Invalid Password",
+                                        Toast.LENGTH_LONG).show();
+                        }
+                }
+                else if(v.equals(btnLogin))
                 {
                         Bundle bundle = new Bundle();
-                        bundle.putString("user", username);
-                        bundle.putString("Lab@2018", password);
                         Intent it = new Intent(this, LoginActivity.class);
                         it.putExtra("data", bundle);
                         startActivity(it);
-                }
-                else
-                {
-                        Toast.makeText(getBaseContext(), "Invalid Password",
-                        Toast.LENGTH_LONG).show();
                 }
         }
         public boolean validatePassword(String password)
