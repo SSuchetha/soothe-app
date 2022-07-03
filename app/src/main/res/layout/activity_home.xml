@@ -10,7 +10,7 @@
         android:id="@+id/book"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="172dp"
         android:text="Book Appointment"
         app:backgroundTint="@android:color/holo_orange_dark"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,13 +42,13 @@
         android:text="Mental health is still a very hushed topic. People feel physical health is the only one that matters. But mental health is a key ingredient without which the recipe for a happy life becomes useless."
         android:textAlignment="center"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/msg"
         app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView6" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/msg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -74,7 +74,7 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="40dp"
         android:text="Mental health disorders may not always have obvious tell-tale signs. Understanding these signs, though often buried deep within is crucial for effective recovery."
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/book"

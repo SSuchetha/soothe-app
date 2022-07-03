@@ -28,11 +28,13 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="190dp"
-        android:layout_height="35dp"
+        android:layout_width="226dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="53dp"
         android:text="Choose a time slot and date"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/groupradio"
         app:layout_constraintStart_toStartOf="@+id/Phone"
         app:layout_constraintTop_toBottomOf="@+id/Phone"
@@ -42,85 +44,65 @@
         android:id="@+id/groupradio"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="324dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/cal"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.021"
         app:layout_constraintStart_toStartOf="@+id/textView">
 
         <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="36dp"
-            android:text="10:00 am - 11:00 am"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Phone" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="11:00 am - 12:00 am"
-            app:layout_constraintEnd_toEndOf="@+id/radioButton"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/radioButton"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton" />
-
-        <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/b1"
             android:layout_width="162dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:text="6:00 pm - 7:00 pm"
+            android:text="6:00 pm - 7:30 pm"
             app:layout_constraintEnd_toEndOf="@+id/radioButton2"
             app:layout_constraintHorizontal_bias="0.029"
             app:layout_constraintStart_toStartOf="@+id/radioButton2"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+            app:layout_constraintTop_toBottomOf="@+id/radioButton2"
+            android:onClick="onRadioButtonClicked"/>
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/b2"
             android:layout_width="160dp"
             android:layout_height="51dp"
             android:layout_marginTop="8dp"
-            android:text="7:00 pm - 8:00 pm"
+            android:text="7:30 pm - 9:00 pm"
             app:layout_constraintEnd_toEndOf="@+id/radioButton3"
             app:layout_constraintHorizontal_bias="0.028"
             app:layout_constraintStart_toStartOf="@+id/radioButton3"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
+            app:layout_constraintTop_toBottomOf="@+id/radioButton3"
+            android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
 
     <CalendarView
-        android:id="@+id/editcalendarView"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:id="@+id/cal"
+        android:layout_width="349dp"
+        android:layout_height="326dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="304dp"
+        android:layout_marginBottom="12dp"
         android:unfocusedMonthDateColor="#FFFFFF"
         android:weekNumberColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnBookApp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnBookApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="16dp"
         android:text="Book"
         app:backgroundTint="@android:color/holo_orange_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,6 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.Cursor;
 
-import androidx.annotation.Nullable;
-
 public class dbHelper extends SQLiteOpenHelper
 {
     public static final String DBNAME="Soothe.db";
