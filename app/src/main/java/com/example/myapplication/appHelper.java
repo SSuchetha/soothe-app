@@ -24,7 +24,7 @@ public class appHelper extends SQLiteOpenHelper
         MyDB.execSQL("drop Table if exists appointment");
     }
 
-    public boolean checkSlotDate(String slot, String date)
+    public Boolean checkSlotDate(String slot, String date)
     {
         SQLiteDatabase MyDB=this.getWritableDatabase();
         Cursor cursor=MyDB.rawQuery("select * from appointment where slot=? and date=?",
@@ -39,18 +39,13 @@ public class appHelper extends SQLiteOpenHelper
     {
         SQLiteDatabase MyDB=this.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
-        if(!checkSlotDate(slot,date))
-        {
-            contentValues.put("name", name);
-            contentValues.put("phno", phno);
-            contentValues.put("slot", slot);
-            contentValues.put("date", date);
-            long result=MyDB.insert("appointment", null, contentValues);
-            if(result==-1)
-                return false;
-            else
-                return true;
-        }
-        return false;
+        contentValues.put("name", name);
+        contentValues.put("phno", phno);
+        contentValues.put("slot", slot);
+        contentValues.put("date", date);
+        long result=MyDB.insert("appointment", null, contentValues);
+        if(result==-1)
+            return false;
+        return true;
     }
 }

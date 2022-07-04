@@ -44,10 +44,10 @@
         android:id="@+id/groupradio"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/cal"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.021"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="@+id/textView">
 
         <RadioButton
@@ -55,24 +55,24 @@
             android:layout_width="162dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
+            android:onClick="onRadioButtonClicked"
             android:text="6:00 pm - 7:30 pm"
             app:layout_constraintEnd_toEndOf="@+id/radioButton2"
             app:layout_constraintHorizontal_bias="0.029"
             app:layout_constraintStart_toStartOf="@+id/radioButton2"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton2"
-            android:onClick="onRadioButtonClicked"/>
+            app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
 
         <RadioButton
             android:id="@+id/b2"
             android:layout_width="160dp"
             android:layout_height="51dp"
             android:layout_marginTop="8dp"
+            android:onClick="onRadioButtonClicked"
             android:text="7:30 pm - 9:00 pm"
             app:layout_constraintEnd_toEndOf="@+id/radioButton3"
             app:layout_constraintHorizontal_bias="0.028"
             app:layout_constraintStart_toStartOf="@+id/radioButton3"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton3"
-            android:onClick="onRadioButtonClicked"/>
+            app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
 
     </RadioGroup>
 
